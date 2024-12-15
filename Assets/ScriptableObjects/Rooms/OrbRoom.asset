@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4001f4ba5842f964a8c4ca0cf7699067, type: 3}
-  m_Name: Starting Room
+  m_Name: OrbRoom
   m_EditorClassIdentifier: 
-  description: The dungeon door slams shut behind you. You are in a maze of twisty
-    little passages, all alike.
-  roomName: starting room
+  description: You are in a vast, dark hall.
+  roomName: orb room
   exits:
-  - keyString: north
-    exitDescription: You see a dark doorway to the north.
-    valueRoom: {fileID: 11400000, guid: fd188eb62f7a5d74a8944a0dca62bb3e, type: 2}
+  - keyString: south
+    exitDescription: There is a door going south with a light coming through it.
+    valueRoom: {fileID: 11400000, guid: b0a22fcafd9a5884fb694084858733eb, type: 2}
