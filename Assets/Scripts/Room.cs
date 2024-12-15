@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Room", menuName = "Text Adventure/Room")]
+[CreateAssetMenu(menuName = "Text Adventure/Room", fileName = "Room")]
 public class Room : ScriptableObject
 {
     [TextArea]

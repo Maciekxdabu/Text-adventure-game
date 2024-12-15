@@ -7,6 +7,7 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private TMP_Text displayText;
+    public InputAction[] inputActions;
 
     [HideInInspector]
     public RoomNavigation roomNavigation;

@@ -33,9 +33,7 @@ public class RoomNavigation : MonoBehaviour
         exitDictionary.Clear();
     }
 
-    // ---------- private methods
-
-    private void AttemptToChangeRooms(string directionNoun)
+    public void AttemptToChangeRooms(string directionNoun)
     {
         if (exitDictionary.ContainsKey(directionNoun))
         {
