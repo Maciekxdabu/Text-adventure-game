@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[RequireComponent(typeof(RoomNavigation))]
+[RequireComponent(typeof(RoomNavigation), typeof(TextInput))]
 public class GameController : MonoBehaviour
 {
     [SerializeField] private TMP_Text displayText;
@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
 
     public void DisplayRoomText()
     {
+        ClearCollectionsForNewRoom();
         UnpackRoom();
 
         string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInRoom.ToArray());
@@ -58,5 +59,11 @@ public class GameController : MonoBehaviour
     private void UnpackRoom()
     {
         roomNavigation.UnpackExitsInRoom();
+    }
+
+    private void ClearCollectionsForNewRoom()
+    {
+        interactionDescriptionsInRoom.Clear();
+        roomNavigation.ClearExits();
     }
 }
