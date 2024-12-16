@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class RoomNavigation : MonoBehaviour
 {
+    [SerializeField] Transform listener;
     public Room currentRoom;
+
+    [SerializeField] RoomSpot[] roomSpots;
+    Dictionary<string, Transform> roomSpotsDictionary = new Dictionary<string, Transform>();
 
     Dictionary<string, Room> exitDictionary = new Dictionary<string, Room>();
 
@@ -15,6 +19,8 @@ public class RoomNavigation : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<GameController>();
+
+        UnpackRoomSpots();
     }
 
     // ---------- public methods
@@ -38,12 +44,28 @@ public class RoomNavigation : MonoBehaviour
         if (exitDictionary.ContainsKey(directionNoun))
         {
             currentRoom = exitDictionary[directionNoun];
+
+            if (roomSpotsDictionary.ContainsKey(currentRoom.name))
+            {
+                listener.position = roomSpotsDictionary[currentRoom.name].position;
+            }
+
             controller.LogStringWithReturn("You head off to the " + directionNoun);
             controller.DisplayRoomText();
         }
         else
         {
             controller.LogStringWithReturn("There is no path to the " + directionNoun);
+        }
+    }
+
+    public void UnpackRoomSpots()
+    {
+        roomSpotsDictionary.Clear();
+
+        for (int i=0; i<roomSpots.Length; i++)
+        {
+            roomSpotsDictionary.Add(roomSpots[i].room.name, roomSpots[i].transform);
         }
     }
 }
