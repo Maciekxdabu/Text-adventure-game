@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class RoomNavigation : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class RoomNavigation : MonoBehaviour
 
             if (roomSpotsDictionary.ContainsKey(currentRoom.name))
             {
-                listener.position = roomSpotsDictionary[currentRoom.name].position;
+                listener.DOMove(roomSpotsDictionary[currentRoom.name].position, 3f);
             }
 
             controller.LogStringWithReturn("You head off to the " + directionNoun);
