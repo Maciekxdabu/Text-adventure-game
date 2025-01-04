@@ -757,7 +757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &481035349
 Transform:
   m_ObjectHideFlags: 0
@@ -1127,7 +1127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1198422273
 Transform:
   m_ObjectHideFlags: 0
@@ -1854,6 +1854,7 @@ GameObject:
   - component: {fileID: 1908326584}
   - component: {fileID: 1908326583}
   - component: {fileID: 1908326586}
+  - component: {fileID: 1908326587}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -1895,6 +1896,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c62273662981c424fafe31d687e81ef7, type: 2}
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
+  interactableItems: {fileID: 0}
 --- !u!4 &1908326585
 Transform:
   m_ObjectHideFlags: 0
@@ -1923,6 +1925,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 553850554}
+--- !u!114 &1908326587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908326582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc85c19cd334dda4cab4d45936025ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nounsInRoom: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
