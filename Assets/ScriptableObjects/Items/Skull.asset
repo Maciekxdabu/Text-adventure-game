@@ -17,3 +17,5 @@ MonoBehaviour:
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
     textResponse: The skull is blackened and charred. Gross.
+  - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
+    textResponse: You take the skull. Cool.
