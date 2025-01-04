@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noun: skull
   description: A weathered human skull lies in the corner.
+  interactions:
+  - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
+    textResponse: The skull is blackened and charred. Gross.
