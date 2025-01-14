@@ -21,15 +21,21 @@ public class InteractableItems : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<GameController>();
+
+        //clear take'able items "taken" flag
+        usableItemList.ForEach(x => x.PlaceInRoom());
     }
 
     // ---------- public methods
 
+    //method for checking if an object in Room is not in player inventory (called from Controller when preparing items)
+    //TODO - Should actually check if an Object was flagged as taken
     public string GetObjectsNotInInventory(Room currentRoom, int i)
     {
         InteractableObject interactableInRoom = currentRoom.interactableObjectsInRoom[i];
 
-        if (!nounsInInventory.Contains(interactableInRoom.noun))
+        //if (!nounsInInventory.Contains(interactableInRoom.noun))
+        if (!interactableInRoom.taken)
         {
             nounsInRoom.Add(interactableInRoom.noun);
             return interactableInRoom.description;
@@ -104,6 +110,7 @@ public class InteractableItems : MonoBehaviour
             nounsInInventory.Add(noun);
             //rebuilt the useDictionary after adding an item
             AddActionResponsesToUseDictionary();
+            GetInteractableObjectFromUsablelist(noun).MarkAsTaken();
             nounsInRoom.Remove(noun);
             return takeDictionary;
         }

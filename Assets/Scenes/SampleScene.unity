@@ -1911,7 +1911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usableItemList:
-  - {fileID: 11400000, guid: d1201ccb108bd3a40bf29f367782f176, type: 2}
+  - {fileID: 11400000, guid: cec39998cc89d3447bc740efa2c26239, type: 2}
   nounsInRoom: []
 --- !u!1 &2068437573
 GameObject:

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e704c39c56dbb2042ae8abb435dd5215, type: 3}
+  m_Name: Stethoscope
+  m_EditorClassIdentifier: 
+  noun: stethoscope
+  description: There is a <b>stethoscope</b> hanging on one of the towel racks.
+  interactions:
+  - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
+    textResponse: A normal medical stethoscope. Allows you to hear things better
+      when you lay it on something.
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
+    textResponse: You unhang the stethoscope and take it with you.
+    actionResponse: {fileID: 0}

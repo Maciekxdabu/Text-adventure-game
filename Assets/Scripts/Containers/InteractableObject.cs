@@ -9,4 +9,17 @@ public class InteractableObject : ScriptableObject
     [TextArea]
     public string description = "Description in room";
     public Interaction[] interactions;
+
+    private bool _taken = false;
+    public bool taken { get { return _taken; } }
+
+    public void PlaceInRoom()
+    {
+        _taken = false;
+    }
+
+    public void MarkAsTaken()
+    {
+        _taken = true;
+    }
 }

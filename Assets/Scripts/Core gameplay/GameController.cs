@@ -91,16 +91,19 @@ public class GameController : MonoBehaviour
 
             for (int j = 0; j < interactableInRoom.interactions.Length; j++)
             {
-                Interaction interaction = interactableInRoom.interactions[j];
-                switch (interaction.inputAction.keyWord)
+                if (!interactableInRoom.taken)
                 {
-                    case "examine":
-                        interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
-                        break;
-                    case "take":
-                        interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.textResponse);
-                        break;
-                    default:break;
+                    Interaction interaction = interactableInRoom.interactions[j];
+                    switch (interaction.inputAction.keyWord)
+                    {
+                        case "examine":
+                            interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+                            break;
+                        case "take":
+                            interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+                            break;
+                        default: break;
+                    }
                 }
             }
         }

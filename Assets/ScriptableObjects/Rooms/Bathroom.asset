@@ -19,4 +19,5 @@ MonoBehaviour:
   - keyString: livingroom
     exitDescription: There is a door leading back to the <b>livingroom</b>.
     valueRoom: {fileID: 11400000, guid: fd188eb62f7a5d74a8944a0dca62bb3e, type: 2}
-  interactableObjectsInRoom: []
+  interactableObjectsInRoom:
+  - {fileID: 11400000, guid: cec39998cc89d3447bc740efa2c26239, type: 2}
