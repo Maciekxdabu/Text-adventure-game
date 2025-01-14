@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4001f4ba5842f964a8c4ca0cf7699067, type: 3}
-  m_Name: EndRoom
+  m_Name: Balcony
   m_EditorClassIdentifier: 
-  description: 'Congratulations!
-
-    You successfully escaped!'
-  roomName: 
+  description: You are in a balcony. Its too high to go down safely and all you can
+    see in the distance are trees. You can hear what you can only describe as sounds
+    of the forest.
+  roomName: balcony
   audioMixer: {fileID: 0}
-  exits: []
+  exits:
+  - keyString: livingroom
+    exitDescription: There is a door leading back to the <b>livingroom</b>.
+    valueRoom: {fileID: 11400000, guid: fd188eb62f7a5d74a8944a0dca62bb3e, type: 2}
   interactableObjectsInRoom: []

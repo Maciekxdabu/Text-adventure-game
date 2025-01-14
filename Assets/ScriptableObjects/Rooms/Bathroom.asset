@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4001f4ba5842f964a8c4ca0cf7699067, type: 3}
-  m_Name: OrbRoom Open
+  m_Name: Bathroom
   m_EditorClassIdentifier: 
-  description: Suddenly there is a shower of dust. The door behind the entrance slams
-    shut behind you.
-  roomName: orb room
+  description: You are in a bathroom. The ceramic tiles make the sound reverb strongly.
+  roomName: bathroom
+  audioMixer: {fileID: 0}
   exits:
-  - keyString: west
-    exitDescription: A secret door opens to the west
-    valueRoom: {fileID: 11400000, guid: f4c5ec8b51daa6c41afecae2056d682c, type: 2}
+  - keyString: livingroom
+    exitDescription: There is a door leading back to the <b>livingroom</b>.
+    valueRoom: {fileID: 11400000, guid: fd188eb62f7a5d74a8944a0dca62bb3e, type: 2}
   interactableObjectsInRoom: []

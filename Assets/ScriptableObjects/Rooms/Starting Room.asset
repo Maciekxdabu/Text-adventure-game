@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4001f4ba5842f964a8c4ca0cf7699067, type: 3}
   m_Name: Starting Room
   m_EditorClassIdentifier: 
-  description: The dungeon door slams shut behind you. You are in a maze of twisty
-    little passages, all alike.
+  description: 'You are playing a text-adventure game made during the SDP course.
+
+    This
+    game main focus is put into the spatial audio.
+
+    You play by typing commands
+    into the console below (type <b>help</b> to see available commands).'
   roomName: starting room
+  audioMixer: {fileID: 0}
   exits:
-  - keyString: north
-    exitDescription: You see a dark doorway to the north.
+  - keyString: livingroom
+    exitDescription: 'To start the game type: <b>go livingroom</b>'
     valueRoom: {fileID: 11400000, guid: fd188eb62f7a5d74a8944a0dca62bb3e, type: 2}
-  interactableObjectsInRoom:
-  - {fileID: 11400000, guid: d1201ccb108bd3a40bf29f367782f176, type: 2}
+  interactableObjectsInRoom: []

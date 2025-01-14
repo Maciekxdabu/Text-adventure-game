@@ -10,17 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e704c39c56dbb2042ae8abb435dd5215, type: 3}
-  m_Name: Skull
+  m_Name: Vending machine
   m_EditorClassIdentifier: 
-  noun: skull
-  description: A weathered human skull lies in the corner.
+  noun: machine
+  description: There is a strange vending <b>machine</b> baside the main door.
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
-    textResponse: The skull is blackened and charred. Gross.
+    textResponse: 'On it you can see an inscription: "5 coins for a key".
+
+      On
+      the side there is a slot for coins.'
     actionResponse: {fileID: 0}
-  - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
-    textResponse: You take the skull. Cool.
-    actionResponse: {fileID: 0}
-  - inputAction: {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
-    textResponse: 
-    actionResponse: {fileID: 11400000, guid: 96868d13006e5fe4e87917da0a5d14cc, type: 2}
