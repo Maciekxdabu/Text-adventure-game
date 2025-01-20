@@ -26,12 +26,16 @@ public class RoomNavigation : MonoBehaviour
 
     // ---------- public methods
 
+    //unpacks the exits in the current Room
     public void UnpackExitsInRoom()
     {
         for (int i = 0; i < currentRoom.exits.Length; i++)
         {
-            exitDictionary.Add(currentRoom.exits[i].keyString, currentRoom.exits[i].valueRoom);
-            controller.interactionDescriptionsInRoom.Add(currentRoom.exits[i].exitDescription);
+            if (FlagManager.AreFlagsMet(currentRoom.exits[i].flags))//check if exit flags are met before adding an exit to interactions
+            {
+                exitDictionary.Add(currentRoom.exits[i].keyString, currentRoom.exits[i].valueRoom);
+                controller.interactionDescriptionsInRoom.Add(currentRoom.exits[i].exitDescription);
+            }
         }
     }
 

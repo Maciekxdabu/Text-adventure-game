@@ -12,6 +12,7 @@ public class InteractableItems : MonoBehaviour
 
     [HideInInspector] public List<string> nounsInRoom = new List<string>();
 
+    //a dictionary of ActionResponses for "use" command (keys are item names)
     Dictionary<string, ActionResponse> useDictionary = new Dictionary<string, ActionResponse>();
     private List<string> nounsInInventory = new List<string>();
     private GameController controller;

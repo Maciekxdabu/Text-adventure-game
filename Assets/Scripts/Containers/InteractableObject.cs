@@ -6,6 +6,7 @@ using UnityEngine;
 public class InteractableObject : ScriptableObject
 {
     public string noun = "name";
+    public Flag[] flags;
     [TextArea]
     public string description = "Description in room";
     public Interaction[] interactions;

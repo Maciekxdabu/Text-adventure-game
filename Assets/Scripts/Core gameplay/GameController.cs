@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[RequireComponent(typeof(RoomNavigation), typeof(TextInput))]
+[RequireComponent(typeof(RoomNavigation), typeof(TextInput), typeof(FlagManager))]
 public class GameController : MonoBehaviour
 {
     [SerializeField] private TMP_Text displayText;
@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     public List<string> interactionDescriptionsInRoom = new List<string>();
     [HideInInspector]
     public InteractableItems interactableItems;
+    [HideInInspector]
+    public FlagManager flagManager;
 
     List<string> actionLog = new List<string>();
 
@@ -24,6 +26,7 @@ public class GameController : MonoBehaviour
     {
         interactableItems = GetComponent<InteractableItems>();
         roomNavigation = GetComponent<RoomNavigation>();
+        flagManager = GetComponent<FlagManager>();
     }
 
     private void Start()
@@ -41,6 +44,7 @@ public class GameController : MonoBehaviour
         displayText.text = logAsText;
     }
 
+    //Clears and unpacks a Room and then displays its description (main method to call)
     public void DisplayRoomText()
     {
         ClearCollectionsForNewRoom();
@@ -71,28 +75,32 @@ public class GameController : MonoBehaviour
 
     // ---------- private methods
 
+    //unpacks the Room (prepares exits and interactions)
     private void UnpackRoom()
     {
         roomNavigation.UnpackExitsInRoom();
         PrepareObjectsToTakeOrExamine(roomNavigation.currentRoom);
     }
 
+    //Prepares the possible interactions in the current Room
     private void PrepareObjectsToTakeOrExamine(Room currentRoom)
     {
         for (int i = 0; i < currentRoom.interactableObjectsInRoom.Length; i++)
         {
-            string descriptionNotInInventory = interactableItems.GetObjectsNotInInventory(currentRoom, i);
-            if (descriptionNotInInventory != null)
-            {
-                interactionDescriptionsInRoom.Add(descriptionNotInInventory);
-            }
-
             InteractableObject interactableInRoom = currentRoom.interactableObjectsInRoom[i];
-
-            for (int j = 0; j < interactableInRoom.interactions.Length; j++)
+            if (!interactableInRoom.taken && FlagManager.AreFlagsMet(interactableInRoom.flags))
             {
-                if (!interactableInRoom.taken)
+                //prepare the interaction descriptions in a room
+                string descriptionNotInInventory = interactableItems.GetObjectsNotInInventory(currentRoom, i);
+                if (descriptionNotInInventory != null)
                 {
+                    interactionDescriptionsInRoom.Add(descriptionNotInInventory);
+                }
+
+                //prepare interaction dictionaries (examine and take)
+                for (int j = 0; j < interactableInRoom.interactions.Length; j++)
+                {
+
                     Interaction interaction = interactableInRoom.interactions[j];
                     switch (interaction.inputAction.keyWord)
                     {
@@ -104,6 +112,7 @@ public class GameController : MonoBehaviour
                             break;
                         default: break;
                     }
+
                 }
             }
         }

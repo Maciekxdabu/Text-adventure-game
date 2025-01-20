@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e704c39c56dbb2042ae8abb435dd5215, type: 3}
-  m_Name: Stethoscope
+  m_Name: Coin 1
   m_EditorClassIdentifier: 
-  noun: stethoscope
-  flags: []
-  description: There is a <b>stethoscope</b> hanging on one of the towel racks.
+  noun: euro_coin
+  flags:
+  - flag: safeUnlocked
+    whitelist: 1
+  description: A 1 <b>euro_coin</b>.
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
     flags: []
-    textResponse: A normal medical stethoscope. Allows you to hear things better
-      when you lay it on something.
+    textResponse: 
     actionResponse: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
     flags: []
-    textResponse: You unhang the stethoscope and take it with you.
+    textResponse: 
     actionResponse: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
     flags: []
-    textResponse: You use the stethoscope to crack open the safe. You're quite skilled
-      at this.
-    actionResponse: {fileID: 11400000, guid: 3e0d2edaadcee4f418c810737f88f6d8, type: 2}
+    textResponse: 
+    actionResponse: {fileID: 0}

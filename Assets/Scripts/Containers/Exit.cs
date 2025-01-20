@@ -6,6 +6,7 @@ using UnityEngine;
 public class Exit
 {
     public string keyString;
+    public Flag[] flags;
     public string exitDescription;
     public Room valueRoom;
 }

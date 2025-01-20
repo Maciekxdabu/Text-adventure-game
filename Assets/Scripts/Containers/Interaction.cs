@@ -7,6 +7,7 @@ public class Interaction
 {
     public InputAction inputAction;
     [TextArea]
+    public Flag[] flags;
     public string textResponse;
     public ActionResponse actionResponse;
 }

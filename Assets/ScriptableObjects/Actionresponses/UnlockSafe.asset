@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d109f508a5005e4dba511585138c544, type: 3}
-  m_Name: SkullInOrbRoom
+  m_Script: {fileID: 11500000, guid: b9df638dd72efa542b24ada8859f2787, type: 3}
+  m_Name: UnlockSafe
   m_EditorClassIdentifier: 
-  requiredString: orb room
-  roomToChangeTo: {fileID: 11400000, guid: d744c81d137d5fa488670dc9dfa2eff2, type: 2}
+  requiredString: livingroom
+  flagToChange: safeUnlocked
+  newFlagState: 1

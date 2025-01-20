@@ -17,10 +17,20 @@ MonoBehaviour:
   audioMixer: {fileID: 0}
   exits:
   - keyString: bathroom
+    flags: []
     exitDescription: There is a door going to the <b>bathroom</b>.
     valueRoom: {fileID: 11400000, guid: f2d6d90bc3a1fae47a8054ea1c6f7fa3, type: 2}
   - keyString: balcony
+    flags: []
     exitDescription: There is a door going to the <b>balcony</b>.
     valueRoom: {fileID: 11400000, guid: d744c81d137d5fa488670dc9dfa2eff2, type: 2}
+  - keyString: outside
+    flags:
+    - flag: doorOpen
+      whitelist: 1
+    exitDescription: The door to the <b>outside</b> finally stands open.
+    valueRoom: {fileID: 11400000, guid: f4c5ec8b51daa6c41afecae2056d682c, type: 2}
   interactableObjectsInRoom:
   - {fileID: 11400000, guid: d1201ccb108bd3a40bf29f367782f176, type: 2}
+  - {fileID: 11400000, guid: 5d4df3d718167d040b38f67b09b7b3e5, type: 2}
+  - {fileID: 11400000, guid: b6c97a134c831a54ab02831dccc5ce98, type: 2}
