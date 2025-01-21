@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e704c39c56dbb2042ae8abb435dd5215, type: 3}
   m_Name: Vending machine
   m_EditorClassIdentifier: 
-  noun: machine
-  description: There is a strange vending <b>machine</b> baside the main door.
+  noun: vending_machine
+  flags: []
+  description: There is a strange vending <b>vending_machine</b> baside the main
+    door.
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
+    flags: []
     textResponse: 'On it you can see an inscription: "5 coins for a key".
 
       On
       the side there is a slot for coins.'
+    failedTextResponse: 
     actionResponse: {fileID: 0}

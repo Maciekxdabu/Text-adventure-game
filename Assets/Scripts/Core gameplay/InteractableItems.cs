@@ -102,6 +102,7 @@ public class InteractableItems : MonoBehaviour
     }
 
     //returns a takeDictionary for "take" InputAction
+    //also removes the item from Room if it was taken successfully
     public Dictionary<string, string> Take (string[] separatedInputWords)
     {
         string noun = separatedInputWords[1];
@@ -136,6 +137,8 @@ public class InteractableItems : MonoBehaviour
                 {
                     controller.LogStringWithReturn("Hmm. Nothing happens.");
                 }
+                else
+                    controller.LogStringWithReturn(useDictionary[nounToUse].successResponse);
             }
             else
             {

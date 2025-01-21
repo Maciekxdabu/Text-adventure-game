@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9df638dd72efa542b24ada8859f2787, type: 3}
-  m_Name: UnlockSafe
+  m_Name: PutCoin1
   m_EditorClassIdentifier: 
   requiredString: livingroom
-  successResponse: You use the stethoscope to crack open the safe. You're quite skilled
-    at this.
-  flagToChange: safeUnlocked
+  successResponse: You put the euro_coin into the machine.
+  flagToChange: inserted_coin1
   newFlagState: 1

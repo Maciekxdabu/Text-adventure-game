@@ -16,17 +16,20 @@ MonoBehaviour:
   flags:
   - flag: safeUnlocked
     whitelist: 1
-  description: A 1 <b>euro_coin</b>.
+  description: A 1 <b>euro_coin</b> inside a safe.
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
     flags: []
-    textResponse: 
+    textResponse: "A standard 1\u20AC eurp_coin."
+    failedTextResponse: 
     actionResponse: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
     flags: []
-    textResponse: 
+    textResponse: You take an euro_coin
+    failedTextResponse: 
     actionResponse: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
     flags: []
-    textResponse: 
-    actionResponse: {fileID: 0}
+    textResponse: You put the euro_coin into the vending_machine.
+    failedTextResponse: 
+    actionResponse: {fileID: 11400000, guid: 9dea58c61c9f10f478fe96619945ccda, type: 2}

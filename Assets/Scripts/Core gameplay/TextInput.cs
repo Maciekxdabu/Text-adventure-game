@@ -19,6 +19,8 @@ public class TextInput : MonoBehaviour
 
     // ---------- private methods
 
+    //A method which parses the input and runs an approporiate InputAction
+    //Attatched to the inputField as a Listener
     private void AcceptStringInput(string userInput)
     {
         userInput = userInput.ToLower();
@@ -41,6 +43,7 @@ public class TextInput : MonoBehaviour
 
     private void InputComplete()
     {
+        controller.DisplayRoomText();
         controller.DisplayLoggedText();
         inputField.ActivateInputField();
         inputField.text = null;

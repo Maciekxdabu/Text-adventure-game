@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4001f4ba5842f964a8c4ca0cf7699067, type: 3}
   m_Name: Living Room
   m_EditorClassIdentifier: 
-  description: 'You are in a big livingroom. '
+  description: You are in a big livingroom. The door is locked.
   roomName: livingroom
   audioMixer: {fileID: 0}
   exits:
@@ -26,7 +26,15 @@ MonoBehaviour:
     valueRoom: {fileID: 11400000, guid: d744c81d137d5fa488670dc9dfa2eff2, type: 2}
   - keyString: outside
     flags:
-    - flag: doorOpen
+    - flag: inserted_coin1
+      whitelist: 1
+    - flag: inserted_coin2
+      whitelist: 1
+    - flag: inserted_coin3
+      whitelist: 1
+    - flag: inserted_coin4
+      whitelist: 1
+    - flag: inserted_coin5
       whitelist: 1
     exitDescription: The door to the <b>outside</b> finally stands open.
     valueRoom: {fileID: 11400000, guid: f4c5ec8b51daa6c41afecae2056d682c, type: 2}

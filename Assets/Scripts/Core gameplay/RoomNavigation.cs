@@ -56,7 +56,7 @@ public class RoomNavigation : MonoBehaviour
             }
 
             controller.LogStringWithReturn("You head off to the " + directionNoun);
-            controller.DisplayRoomText();
+            //controller.DisplayRoomText();
         }
         else
         {

@@ -37,6 +37,7 @@ public class GameController : MonoBehaviour
 
     // ---------- public methods
 
+    //Dislays a text in the console (refreshes the display)
     public void DisplayLoggedText()
     {
         string logAsText = string.Join("\n", actionLog.ToArray());
@@ -44,7 +45,9 @@ public class GameController : MonoBehaviour
         displayText.text = logAsText;
     }
 
-    //Clears and unpacks a Room and then displays its description (main method to call)
+    /// <summary>
+    /// Clears and unpacks a Room and then logs its description (does not display by itself)
+    /// </summary>
     public void DisplayRoomText()
     {
         ClearCollectionsForNewRoom();
@@ -57,8 +60,12 @@ public class GameController : MonoBehaviour
         LogStringWithReturn(combinedText);
     }
 
+    //Adds a new entry to logs and a new line symbol just after
     public void LogStringWithReturn(string stringToAdd)
     {
+        if (stringToAdd == null || stringToAdd == "")
+            return;
+
         actionLog.Add(stringToAdd + "\n");
     }
 
@@ -105,10 +112,10 @@ public class GameController : MonoBehaviour
                     switch (interaction.inputAction.keyWord)
                     {
                         case "examine":
-                            interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+                            interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.GetResponseBasedOnFlags());
                             break;
                         case "take":
-                            interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+                            interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.GetResponseBasedOnFlags());
                             break;
                         default: break;
                     }
