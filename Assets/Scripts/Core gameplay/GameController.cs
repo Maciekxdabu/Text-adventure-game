@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour
             {
                 //prepare the interaction descriptions in a room
                 string descriptionNotInInventory = interactableItems.GetObjectsNotInInventory(currentRoom, i);
-                if (descriptionNotInInventory != null)
+                if (descriptionNotInInventory != null && interactableInRoom.invisibleInRoom == false)
                 {
                     interactionDescriptionsInRoom.Add(descriptionNotInInventory);
                 }

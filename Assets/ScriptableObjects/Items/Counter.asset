@@ -10,19 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e704c39c56dbb2042ae8abb435dd5215, type: 3}
-  m_Name: Vending machine
+  m_Name: Counter
   m_EditorClassIdentifier: 
-  noun: vending_machine
+  noun: counter
   invisibleInRoom: 0
   flags: []
-  description: There is a strange vending <b>vending_machine</b> baside the main
-    door.
+  description: A simple wooden <b>counter</b> stands below the window.
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
     flags: []
-    textResponse: 'On it you can see an inscription: "5 coins for a key".
-
-      On
-      the side there is a slot for coins. The tray is empty.'
+    textResponse: Inside the counter you find some <b>biscuits</b>
     failedTextResponse: 
     actionResponse: {fileID: 0}
