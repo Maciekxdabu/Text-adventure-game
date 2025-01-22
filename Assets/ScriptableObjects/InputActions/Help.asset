@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aab9364ee743f1428c80b215d6b2592, type: 3}
+  m_Name: Help
+  m_EditorClassIdentifier: 
+  keyWord: help
+  helpMessage: '<b>help</b> - displays this help message
+
+    <b>go X</b> - used
+    to change current location/room, type X for where you want to go
+
+    <b>examine
+    X</b> - examines the X object by displaying a better description (sometimes the
+    description changes when you do something)
+
+    <b>take X</b> - take X from the
+    room you are in currently
+
+    <b>inventory</b> - displays your current inventory
+
+    <b>use
+    X</b> - uses the X item from your inventory (if possible/applicable)'

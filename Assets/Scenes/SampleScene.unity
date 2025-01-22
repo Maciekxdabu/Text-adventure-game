@@ -1868,6 +1868,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
   - {fileID: 11400000, guid: 27f275ef5710b9f449a409fb137b91c3, type: 2}
   - {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
+  - {fileID: 11400000, guid: 9e6cd09a92f02df479b0ee8db86d29c9, type: 2}
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
   interactableItems: {fileID: 0}

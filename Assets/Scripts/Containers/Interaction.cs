@@ -11,6 +11,7 @@ public class Interaction
     public string textResponse;
     [TextArea, Tooltip("Text Response when flags not met (does not work with \"use\" and \"inventory\")")]
     public string failedTextResponse;
+    [Tooltip("Only applicable for \"use\" Action")]
     public ActionResponse actionResponse;
 
     // ---------- public methods
