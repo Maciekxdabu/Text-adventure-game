@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e704c39c56dbb2042ae8abb435dd5215, type: 3}
-  m_Name: Laundry
+  m_Name: Drawers
   m_EditorClassIdentifier: 
-  noun: laundry
-  invisibleInRoom: 0
-  flags:
-  - flag: washingOFF
-    whitelist: 1
-  description: Now accessible <b>laundry</b> lies in the washing machine drum.
+  noun: drawers
+  invisibleInRoom: 1
+  flags: []
+  description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
-    flags: []
-    textResponse: After a little searching, inside one of the trousers pockets you
-      find a <b>zloty_coin</b>.
-    failedTextResponse: 
+    flags:
+    - flag: TVON
+      whitelist: 1
+    - flag: radioON
+      whitelist: 1
+    textResponse: The drawers are now open. Inside you find an old <b>aztec_coin</b>.
+    failedTextResponse: A set of drawers. They are closed and connected to what looks
+      like a microphone. Maybe you can open it if you make some specific noises.
     actionResponse: {fileID: 0}

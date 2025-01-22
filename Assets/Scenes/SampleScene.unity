@@ -1920,6 +1920,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55a8831e055673f43aded7f4f19144ef, type: 2}
   - {fileID: 11400000, guid: 6c555a0ef302e4f46a90c91bd248c93f, type: 2}
   - {fileID: 11400000, guid: 46bb19b4805aa3f4c8cc437589cf856e, type: 2}
+  - {fileID: 11400000, guid: 08d31139ee2c0fa43a14b096cc327c8b, type: 2}
+  - {fileID: 11400000, guid: 75d2f520987a3594fb6ba14ab3849204, type: 2}
   nounsInRoom: []
 --- !u!114 &1908326588
 MonoBehaviour:
