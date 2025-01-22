@@ -7,7 +7,7 @@ public class Use : InputAction
 {
     public override void RespondToInput(GameController controller, string[] separatedInputWords)
     {
-        //use Action does not Log a string so an interaction must deal with it
+        //use InputAction Logs a string by its ActionResponse
         controller.interactableItems.UseItem(separatedInputWords);
     }
 }

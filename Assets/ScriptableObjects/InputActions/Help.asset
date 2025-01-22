@@ -28,4 +28,8 @@ MonoBehaviour:
     <b>inventory</b> - displays your current inventory
 
     <b>use
-    X</b> - uses the X item from your inventory (if possible/applicable)'
+    X</b> - uses the X item from your inventory (if possible/applicable)
+
+    <b>operate
+    X</b> - used to operate some of the machinery (turning it ON/OFF, pushing buttons,
+    etc.)'

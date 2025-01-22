@@ -17,7 +17,11 @@ MonoBehaviour:
   audioMixer: {fileID: 0}
   exits:
   - keyString: livingroom
+    flags: []
     exitDescription: There is a door leading back to the <b>livingroom</b>.
     valueRoom: {fileID: 11400000, guid: fd188eb62f7a5d74a8944a0dca62bb3e, type: 2}
   interactableObjectsInRoom:
   - {fileID: 11400000, guid: cec39998cc89d3447bc740efa2c26239, type: 2}
+  - {fileID: 11400000, guid: 7f164ca39f3476e41b306e427e5ee80e, type: 2}
+  - {fileID: 11400000, guid: 9b87bf457c9b3c84d99152a20f1316d5, type: 2}
+  - {fileID: 11400000, guid: 46bb19b4805aa3f4c8cc437589cf856e, type: 2}

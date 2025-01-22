@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e704c39c56dbb2042ae8abb435dd5215, type: 3}
+  m_Name: Washing machine
+  m_EditorClassIdentifier: 
+  noun: washing_machine
+  invisibleInRoom: 0
+  flags:
+  - flag: washingOFF
+    whitelist: 0
+  description: A working <b>washing_machine</b> lies in the corner of the room.
+  interactions:
+  - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
+    flags: []
+    textResponse: The washing machine is running some kind of program. The weight
+      of the laundry inside makes it tremble.
+    failedTextResponse: 
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 944ac97334c5e3341a00397f6c2bfb6b, type: 2}
+    flags: []
+    textResponse: 
+    failedTextResponse: 
+    actionResponse: {fileID: 11400000, guid: fae2ccfdac7a1a64d8be90a7b55e0321, type: 2}

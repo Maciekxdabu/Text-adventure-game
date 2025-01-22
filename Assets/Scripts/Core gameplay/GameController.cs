@@ -117,6 +117,9 @@ public class GameController : MonoBehaviour
                         case "take":
                             interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.GetResponseBasedOnFlags());
                             break;
+                        case "operate":
+                            interactableItems.operateDictionary.Add(interactableInRoom.noun, interaction.actionResponse);
+                            break;
                         default: break;
                     }
 

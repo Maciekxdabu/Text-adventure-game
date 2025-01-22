@@ -6,9 +6,10 @@ public class InteractableItems : MonoBehaviour
 {
     public List<InteractableObject> usableItemList;
 
-    //dictionary for "examine" and "take" InputActions
+    //dictionary for "examine", "take" and "operate" InputActions
     public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
     public Dictionary<string, string> takeDictionary = new Dictionary<string, string>();
+    public Dictionary<string, ActionResponse> operateDictionary = new Dictionary<string, ActionResponse>();
 
     [HideInInspector] public List<string> nounsInRoom = new List<string>();
 
@@ -98,6 +99,7 @@ public class InteractableItems : MonoBehaviour
     {
         examineDictionary.Clear();
         takeDictionary.Clear();
+        operateDictionary.Clear();
         nounsInRoom.Clear();
     }
 
@@ -148,6 +150,27 @@ public class InteractableItems : MonoBehaviour
         else
         {
             controller.LogStringWithReturn("There is no " + nounToUse + " in your inventory");
+        }
+    }
+
+    //method for "operate" InputAction to operate items in rooms
+    public void OperateItem(string[] separatedInputWords)
+    {
+        string nounToUse = separatedInputWords[1];
+
+        if (operateDictionary.ContainsKey(nounToUse))
+        {
+            bool actionResult = operateDictionary[nounToUse].DoActionResponse(controller);
+            if (!actionResult)
+            {
+                controller.LogStringWithReturn("Hmm. Nothing happens.");
+            }
+            else
+                controller.LogStringWithReturn(operateDictionary[nounToUse].successResponse);
+        }
+        else
+        {
+            controller.LogStringWithReturn("You can't operate the " + nounToUse);
         }
     }
 }

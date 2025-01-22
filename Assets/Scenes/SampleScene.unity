@@ -1868,6 +1868,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
   - {fileID: 11400000, guid: 27f275ef5710b9f449a409fb137b91c3, type: 2}
   - {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
+  - {fileID: 11400000, guid: 944ac97334c5e3341a00397f6c2bfb6b, type: 2}
   - {fileID: 11400000, guid: 9e6cd09a92f02df479b0ee8db86d29c9, type: 2}
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
@@ -1918,6 +1919,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6c97a134c831a54ab02831dccc5ce98, type: 2}
   - {fileID: 11400000, guid: 55a8831e055673f43aded7f4f19144ef, type: 2}
   - {fileID: 11400000, guid: 6c555a0ef302e4f46a90c91bd248c93f, type: 2}
+  - {fileID: 11400000, guid: 46bb19b4805aa3f4c8cc437589cf856e, type: 2}
   nounsInRoom: []
 --- !u!114 &1908326588
 MonoBehaviour:
