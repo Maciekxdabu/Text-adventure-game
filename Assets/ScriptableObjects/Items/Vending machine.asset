@@ -20,9 +20,10 @@ MonoBehaviour:
   interactions:
   - inputAction: {fileID: 11400000, guid: 45c3a4a879bc03441b12e85a247a83df, type: 2}
     flags: []
-    textResponse: 'On it you can see an inscription: "5 coins for a key".
+    textResponse: 'On it you can see an inscription: "4 coins for a pass".
 
       On
-      the side there is a slot for coins. The tray is empty.'
+      the side there is a slot for coins.'
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents: []

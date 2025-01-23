@@ -22,7 +22,7 @@ MonoBehaviour:
     - flag: radioON
       whitelist: 1
     textResponse: The radio emits some unintelligible static.
-    failedTextResponse: It looks like an old radio. It looks preety simple to operate.
+    failedTextResponse: It looks like an old radio. It looks pretty simple to operate.
     actionResponse: {fileID: 0}
     audioEvents: []
   - inputAction: {fileID: 11400000, guid: 944ac97334c5e3341a00397f6c2bfb6b, type: 2}
