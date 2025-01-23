@@ -25,3 +25,10 @@ MonoBehaviour:
       find a <b>zloty_coin</b>.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents:
+    - clip: {fileID: 8300000, guid: 52ab607fb6e08c64fbbadc4fe461dd88, type: 3}
+      passiveOrOneShot: 0
+      objectAffected: {fileID: 11400000}
+    - clip: {fileID: 8300000, guid: 3ab9f0809935fba4a9cf92b844827cf9, type: 3}
+      passiveOrOneShot: 0
+      objectAffected: {fileID: 11400000}

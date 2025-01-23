@@ -29,7 +29,10 @@ MonoBehaviour:
     textResponse: You unhang the stethoscope and take it with you.
     failedTextResponse: 
     actionResponse: {fileID: 0}
-    audioEvents: []
+    audioEvents:
+    - clip: {fileID: 8300000, guid: 611517667ceab144d825783360c25919, type: 3}
+      passiveOrOneShot: 0
+      objectAffected: {fileID: 11400000}
   - inputAction: {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
     flags: []
     textResponse: 

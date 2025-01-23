@@ -24,6 +24,7 @@ MonoBehaviour:
     textResponse: The radio emits some unintelligible static.
     failedTextResponse: It looks like an old radio. It looks preety simple to operate.
     actionResponse: {fileID: 0}
+    audioEvents: []
   - inputAction: {fileID: 11400000, guid: 944ac97334c5e3341a00397f6c2bfb6b, type: 2}
     flags:
     - flag: radIoON
@@ -31,3 +32,7 @@ MonoBehaviour:
     textResponse: 
     failedTextResponse: 
     actionResponse: {fileID: 11400000, guid: 0aba32c2970b3c549abecc3462492c43, type: 2}
+    audioEvents:
+    - clip: {fileID: 8300000, guid: 918f0aaf7482e6644891dd513667bdf7, type: 3}
+      passiveOrOneShot: 1
+      objectAffected: {fileID: 11400000}

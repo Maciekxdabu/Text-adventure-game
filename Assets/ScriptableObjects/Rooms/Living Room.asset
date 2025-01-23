@@ -39,7 +39,7 @@ MonoBehaviour:
       whitelist: 1
     - flag: inserted_coin4
       whitelist: 1
-    exitDescription: Afteryou put all the coins in the door to the <b>outside</b>
+    exitDescription: After you put all the coins in the door to the <b>outside</b>
       finally stands open.
     valueRoom: {fileID: 11400000, guid: f4c5ec8b51daa6c41afecae2056d682c, type: 2}
   interactableObjectsInRoom:

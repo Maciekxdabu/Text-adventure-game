@@ -17,5 +17,9 @@ MonoBehaviour:
     You successfully escaped!'
   roomName: endroom
   audioMixer: {fileID: 0}
+  audioMixerSnapshot:
+  - {fileID: 24500006, guid: a2f099459f838ea4886308fdf090efb9, type: 2}
+  snapshotWeights:
+  - 1
   exits: []
   interactableObjectsInRoom: []

@@ -22,13 +22,19 @@ MonoBehaviour:
     textResponse: A simple remote. It seems to be to the nearby television.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents: []
   - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
     flags: []
     textResponse: You take the remote with you.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents: []
   - inputAction: {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
     flags: []
     textResponse: 
     failedTextResponse: 
     actionResponse: {fileID: 11400000, guid: 8505a946fe617ff4eb7e6efa5f1049ee, type: 2}
+    audioEvents:
+    - clip: {fileID: 8300000, guid: 7f53acddefd540195aec1a194f0e9f23, type: 3}
+      passiveOrOneShot: 1
+      objectAffected: {fileID: 11400000, guid: 9d11d8fa56684cb45bd3093e3bab53aa, type: 2}
