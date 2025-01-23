@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] ObjectSpot[] objectSpots;
     Dictionary<string, ObjectSpot> objectSpotsDictionary = new Dictionary<string, ObjectSpot>();
+
+    [SerializeField] private AudioSource footStepsAudioSource;
 
     // ---------- Unity messages
 
@@ -40,5 +43,15 @@ public class AudioManager : MonoBehaviour
             return objectSpotsDictionary[objectNoun];
         else
             return null;
+    }
+
+    public void ActivateFootsteps(bool value)
+    {
+        footStepsAudioSource.mute = !value;
+    }
+
+    public void ChangeFootstepsMixer(AudioMixerGroup mixerGroup)
+    {
+        footStepsAudioSource.outputAudioMixerGroup = mixerGroup;
     }
 }

@@ -34,4 +34,7 @@ MonoBehaviour:
     textResponse: 
     failedTextResponse: 
     actionResponse: {fileID: 11400000, guid: fae2ccfdac7a1a64d8be90a7b55e0321, type: 2}
-    audioEvents: []
+    audioEvents:
+    - clip: {fileID: 0}
+      passiveOrOneShot: 1
+      objectAffected: {fileID: 11400000}

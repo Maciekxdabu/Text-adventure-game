@@ -52,4 +52,9 @@ public class TextInput : MonoBehaviour
         inputField.ActivateInputField();
         inputField.text = null;
     }
+
+    public void DeactivateTextField()
+    {
+        inputField.DeactivateInputField();
+    }
 }

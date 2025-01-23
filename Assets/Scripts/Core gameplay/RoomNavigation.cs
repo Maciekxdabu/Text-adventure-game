@@ -59,11 +59,13 @@ public class RoomNavigation : MonoBehaviour
             {
                 //make a DOTween Sequence to move from one Room to another and change Mixers
                 Sequence sequence = DOTween.Sequence();
+                sequence.AppendCallback(() => controller.audioManager.ActivateFootsteps(true));
                 sequence.Append(listener.DOLookAt(roomSpotsDictionary[currentRoom.name].position, 1f));
                 sequence.Append(listener.DOMove(roomSpotsDictionary[currentRoom.name].position, 3f));
                 sequence.InsertCallback(2f, () => currentRoom.audioMixer.audioMixer.TransitionToSnapshots(currentRoom.audioMixerSnapshot, currentRoom.snapshotWeights, 1f));
+                sequence.InsertCallback(2.5f, () => controller.audioManager.ChangeFootstepsMixer(currentRoom.audioMixer));
                 sequence.AppendCallback(controller.textInput.InputComplete);
-                sequence.OnComplete(() => controller.DisplayRoomText());
+                sequence.OnComplete(() => {controller.DisplayRoomText(); controller.textInput.InputComplete(); controller.audioManager.ActivateFootsteps(false); });
 
                 sequence.Play();
             }
