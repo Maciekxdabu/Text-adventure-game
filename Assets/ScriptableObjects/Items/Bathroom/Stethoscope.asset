@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Stethoscope
   m_EditorClassIdentifier: 
   noun: stethoscope
+  invisibleInRoom: 0
   flags: []
   description: There is a <b>stethoscope</b> hanging on one of the towel racks.
   interactions:
@@ -22,13 +23,19 @@ MonoBehaviour:
       when you lay it on something.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents: []
   - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
     flags: []
     textResponse: You unhang the stethoscope and take it with you.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents: []
   - inputAction: {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
     flags: []
     textResponse: 
     failedTextResponse: 
     actionResponse: {fileID: 11400000, guid: 3e0d2edaadcee4f418c810737f88f6d8, type: 2}
+    audioEvents:
+    - clip: {fileID: 8300000, guid: 7a1136878b17c3e1eab375501ec9db9c, type: 3}
+      passiveOrOneShot: 0
+      objectAffected: {fileID: 11400000, guid: 5d4df3d718167d040b38f67b09b7b3e5, type: 2}

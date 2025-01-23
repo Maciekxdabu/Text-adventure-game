@@ -96,6 +96,7 @@ public class GameController : MonoBehaviour
     //Prepares the possible interactions in the current Room
     private void PrepareObjectsToTakeOrExamine(Room currentRoom)
     {
+        //prepare objects in current room
         for (int i = 0; i < currentRoom.interactableObjectsInRoom.Length; i++)
         {
             InteractableObject interactableInRoom = currentRoom.interactableObjectsInRoom[i];
@@ -130,6 +131,9 @@ public class GameController : MonoBehaviour
                 }
             }
         }
+
+        //prepare objects in inventory
+        interactableItems.UnpackItemsToDictionary();
     }
 
     private void ClearCollectionsForNewRoom()

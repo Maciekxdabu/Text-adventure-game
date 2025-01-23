@@ -11,6 +11,8 @@ public class InteractableItems : MonoBehaviour
     public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
     public Dictionary<string, string> takeDictionary = new Dictionary<string, string>();
     public Dictionary<string, ActionResponse> operateDictionary = new Dictionary<string, ActionResponse>();
+
+    //interaction Dictionary - its keys are: (InputAction.keyWord, interactableObject.noun)
     public Dictionary<(string, string), Interaction> interactionDictionary = new Dictionary<(string, string), Interaction>();
 
     [HideInInspector] public List<string> nounsInRoom = new List<string>();
@@ -196,6 +198,21 @@ public class InteractableItems : MonoBehaviour
         else
         {
             controller.LogStringWithReturn("You can't operate the " + nounToUse);
+        }
+    }
+
+    public void UnpackItemsToDictionary()
+    {
+        for (int i = 0; i < usableItemList.Count; i++)
+        {
+            InteractableObject interactableObject = usableItemList[i];
+            for (int j = 0; j < interactableObject.interactions.Length; j++)
+            {
+                Interaction interaction = interactableObject.interactions[j];
+
+                if (!interactionDictionary.ContainsKey((interaction.inputAction.keyWord, interactableObject.noun)))
+                    interactionDictionary.Add((interaction.inputAction.keyWord, interactableObject.noun), interaction);
+            }
         }
     }
 
