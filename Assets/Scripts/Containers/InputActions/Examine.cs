@@ -11,5 +11,8 @@ public class Examine : InputAction
 
         //AudioEvent
         controller.interactableItems.TryRunAudioEvent(separatedInputWords);
+
+        //Rotate towards
+        controller.roomNavigation.RotateListenerTowards(separatedInputWords[1]);
     }
 }

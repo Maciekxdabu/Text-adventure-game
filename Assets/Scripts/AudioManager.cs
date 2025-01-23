@@ -33,4 +33,12 @@ public class AudioManager : MonoBehaviour
             objectSpotsDictionary[audioEvent.objectAffected.noun].RunAudioEvent(audioEvent);
         }
     }
+
+    public ObjectSpot GetObjectSpot(string objectNoun)
+    {
+        if (objectSpotsDictionary.ContainsKey(objectNoun))
+            return objectSpotsDictionary[objectNoun];
+        else
+            return null;
+    }
 }

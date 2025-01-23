@@ -13,6 +13,9 @@ public class RoomNavigation : MonoBehaviour
 
     Dictionary<string, Room> exitDictionary = new Dictionary<string, Room>();
 
+    [Header("Settings")]
+    public float turnTime = 1f;
+
     private GameController controller;
 
     // ---------- Unity methods
@@ -72,6 +75,16 @@ public class RoomNavigation : MonoBehaviour
         for (int i=0; i<roomSpots.Length; i++)
         {
             roomSpotsDictionary.Add(roomSpots[i].room.name, roomSpots[i].transform);
+        }
+    }
+
+    public void RotateListenerTowards(string objectNoun)
+    {
+        ObjectSpot objectSpot = controller.audioManager.GetObjectSpot(objectNoun);
+
+        if (objectSpot != null)
+        {
+            listener.DOLookAt(objectSpot.transform.position, turnTime);
         }
     }
 }
