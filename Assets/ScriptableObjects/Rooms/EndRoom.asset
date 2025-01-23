@@ -15,7 +15,7 @@ MonoBehaviour:
   description: 'Congratulations!
 
     You successfully escaped!'
-  roomName: 
+  roomName: endroom
   audioMixer: {fileID: 0}
   exits: []
   interactableObjectsInRoom: []

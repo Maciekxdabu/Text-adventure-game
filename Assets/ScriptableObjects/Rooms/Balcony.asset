@@ -16,7 +16,8 @@ MonoBehaviour:
     see in the distance are trees. You can hear what you can only describe as sounds
     of the forest.
   roomName: balcony
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: -6422545758080845508, guid: a2f099459f838ea4886308fdf090efb9,
+    type: 2}
   exits:
   - keyString: livingroom
     flags: []

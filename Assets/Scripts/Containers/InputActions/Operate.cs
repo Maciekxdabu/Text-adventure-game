@@ -9,5 +9,8 @@ public class Operate : InputAction
     {
         //operate InputAction Logs a string by its ActionResponse
         controller.interactableItems.OperateItem(separatedInputWords);
+
+        //AudioEvent
+        controller.interactableItems.TryRunAudioEvent(separatedInputWords);
     }
 }

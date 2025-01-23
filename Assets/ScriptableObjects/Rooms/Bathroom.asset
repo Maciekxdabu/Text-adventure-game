@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: You are in a bathroom. The ceramic tiles make the sound reverb strongly.
   roomName: bathroom
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 1152776747183897331, guid: a2f099459f838ea4886308fdf090efb9,
+    type: 2}
   exits:
   - keyString: livingroom
     flags: []

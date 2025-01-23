@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[RequireComponent(typeof(RoomNavigation), typeof(TextInput), typeof(FlagManager))]
+[RequireComponent(typeof(RoomNavigation), typeof(TextInput), typeof(FlagManager)),
+    RequireComponent(typeof(AudioManager))]
 public class GameController : MonoBehaviour
 {
     [SerializeField] private TMP_Text displayText;
@@ -17,6 +18,8 @@ public class GameController : MonoBehaviour
     public InteractableItems interactableItems;
     [HideInInspector]
     public FlagManager flagManager;
+    [HideInInspector]
+    public AudioManager audioManager;
 
     List<string> actionLog = new List<string>();
 
@@ -27,6 +30,7 @@ public class GameController : MonoBehaviour
         interactableItems = GetComponent<InteractableItems>();
         roomNavigation = GetComponent<RoomNavigation>();
         flagManager = GetComponent<FlagManager>();
+        audioManager = GetComponent<AudioManager>();
     }
 
     private void Start()
@@ -107,8 +111,8 @@ public class GameController : MonoBehaviour
                 //prepare interaction dictionaries (examine and take)
                 for (int j = 0; j < interactableInRoom.interactions.Length; j++)
                 {
-
                     Interaction interaction = interactableInRoom.interactions[j];
+                    interactableItems.interactionDictionary.Add((interaction.inputAction.keyWord, interactableInRoom.noun), interactableInRoom.interactions[j]);
                     switch (interaction.inputAction.keyWord)
                     {
                         case "examine":

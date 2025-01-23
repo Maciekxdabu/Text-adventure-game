@@ -13,6 +13,8 @@ public class Interaction
     public string failedTextResponse;
     [Tooltip("Only applicable for \"use\" and \"operate\" Action")]
     public ActionResponse actionResponse;
+    [Tooltip("A list of Audio events to happen (happens on a success if applicable)")]
+    public AudioEvent[] audioEvents;
 
     // ---------- public methods
 

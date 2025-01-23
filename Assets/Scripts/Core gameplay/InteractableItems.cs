@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class InteractableItems : MonoBehaviour
 {
+    [Tooltip("A list of items that can be taken into inventory and later used somewhere")]
     public List<InteractableObject> usableItemList;
 
     //dictionary for "examine", "take" and "operate" InputActions
     public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
     public Dictionary<string, string> takeDictionary = new Dictionary<string, string>();
     public Dictionary<string, ActionResponse> operateDictionary = new Dictionary<string, ActionResponse>();
+    public Dictionary<(string, string), Interaction> interactionDictionary = new Dictionary<(string, string), Interaction>();
 
     [HideInInspector] public List<string> nounsInRoom = new List<string>();
 
@@ -46,7 +48,7 @@ public class InteractableItems : MonoBehaviour
         return null;
     }
 
-    //prepare useDictionary for items in inventory (store SO references)
+    //prepare useDictionary for items in inventory (store SO references) (only adds new references)
     public void AddActionResponsesToUseDictionary()
     {
         for (int i = 0; i < nounsInInventory.Count; i++)
@@ -57,6 +59,7 @@ public class InteractableItems : MonoBehaviour
             if (interactableObjectInInventory == null)
                 continue;
 
+            //adds items in inventory with "use" to the use Dictionary (unless they are already there)
             for (int j = 0; j < interactableObjectInInventory.interactions.Length; j++)
             {
                 Interaction interaction = interactableObjectInInventory.interactions[j];
@@ -85,6 +88,20 @@ public class InteractableItems : MonoBehaviour
         return null;
     }
 
+    //Get Interaction reference to the item based on noun and InputAction name
+    Interaction GetInteractionFromUsableList(string noun, string inputAction)
+    {
+        InteractableObject interactableObject = GetInteractableObjectFromUsablelist(noun);
+
+        for (int i = 0; i < interactableObject.interactions.Length; i++)
+        {
+            if (interactableObject.interactions[i].inputAction.keyWord == inputAction)
+                return interactableObject.interactions[i];
+        }
+
+        return null;
+    }
+
     public void DisplayInventory()
     {
         controller.LogStringWithReturn("You look in your backpack, inside you have: ");
@@ -100,6 +117,7 @@ public class InteractableItems : MonoBehaviour
         examineDictionary.Clear();
         takeDictionary.Clear();
         operateDictionary.Clear();
+        interactionDictionary.Clear();
         nounsInRoom.Clear();
     }
 
@@ -140,7 +158,12 @@ public class InteractableItems : MonoBehaviour
                     controller.LogStringWithReturn("Hmm. Nothing happens.");
                 }
                 else
+                {
                     controller.LogStringWithReturn(useDictionary[nounToUse].successResponse);
+
+                    //AudioEvent (after "use" success)
+                    controller.interactableItems.TryRunAudioEvent(separatedInputWords);
+                }
             }
             else
             {
@@ -166,11 +189,26 @@ public class InteractableItems : MonoBehaviour
                 controller.LogStringWithReturn("Hmm. Nothing happens.");
             }
             else
+            {
                 controller.LogStringWithReturn(operateDictionary[nounToUse].successResponse);
+            }
         }
         else
         {
             controller.LogStringWithReturn("You can't operate the " + nounToUse);
+        }
+    }
+
+    //Runs AudioEvent's on the given Object Interaction's (if an Object with such an Interaction exists in the dictionary)
+    public void TryRunAudioEvent(string[] separatedInputWords)
+    {
+        if (interactionDictionary.ContainsKey((separatedInputWords[0], separatedInputWords[1])))
+        {
+            AudioEvent[] audioEvents = interactionDictionary[(separatedInputWords[0], separatedInputWords[1])].audioEvents;
+            for (int i = 0; i < audioEvents.Length; i++)
+            {
+                controller.audioManager.RunAudioEvent(audioEvents[i]);
+            }
         }
     }
 }

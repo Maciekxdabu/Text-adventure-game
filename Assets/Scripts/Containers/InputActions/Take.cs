@@ -12,6 +12,9 @@ public class Take : InputAction
         if (takeDictionary != null)
         {
             controller.LogStringWithReturn(controller.TestVerbDictionaryWithNoun(takeDictionary, separatedInputWords[0], separatedInputWords[1]));
+
+            //AudioEvent
+            controller.interactableItems.TryRunAudioEvent(separatedInputWords);
         }
     }
 }

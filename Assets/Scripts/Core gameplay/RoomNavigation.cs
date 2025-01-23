@@ -64,6 +64,7 @@ public class RoomNavigation : MonoBehaviour
         }
     }
 
+    //Unpacks a Transform dictionary of RoomSpot's for later navigation
     public void UnpackRoomSpots()
     {
         roomSpotsDictionary.Clear();

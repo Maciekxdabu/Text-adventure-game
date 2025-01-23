@@ -25,8 +25,13 @@ MonoBehaviour:
       of the laundry inside makes it tremble.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents:
+    - clip: {fileID: 8300000, guid: ea6ac880df9e61647b27b6bad05556c1, type: 3}
+      passiveOrOneShot: 0
+      objectAffected: {fileID: 11400000}
   - inputAction: {fileID: 11400000, guid: 944ac97334c5e3341a00397f6c2bfb6b, type: 2}
     flags: []
     textResponse: 
     failedTextResponse: 
     actionResponse: {fileID: 11400000, guid: fae2ccfdac7a1a64d8be90a7b55e0321, type: 2}
+    audioEvents: []
