@@ -35,15 +35,19 @@ public class TextInput : MonoBehaviour
             if (inputAction.keyWord == separatedInputWords[0])
             {
                 inputAction.RespondToInput(controller, separatedInputWords);
+
+                if (inputAction.keyWord != "go")
+                {
+                    controller.DisplayRoomText();
+                }
             }
         }
 
         InputComplete();
     }
 
-    private void InputComplete()
+    public void InputComplete()
     {
-        controller.DisplayRoomText();
         controller.DisplayLoggedText();
         inputField.ActivateInputField();
         inputField.text = null;

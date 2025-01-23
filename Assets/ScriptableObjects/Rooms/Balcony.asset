@@ -18,6 +18,10 @@ MonoBehaviour:
   roomName: balcony
   audioMixer: {fileID: -6422545758080845508, guid: a2f099459f838ea4886308fdf090efb9,
     type: 2}
+  audioMixerSnapshot:
+  - {fileID: 6112514215182995638, guid: a2f099459f838ea4886308fdf090efb9, type: 2}
+  snapshotWeights:
+  - 1
   exits:
   - keyString: livingroom
     flags: []

@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
     public FlagManager flagManager;
     [HideInInspector]
     public AudioManager audioManager;
+    [HideInInspector]
+    public TextInput textInput;
 
     List<string> actionLog = new List<string>();
 
@@ -31,6 +33,7 @@ public class GameController : MonoBehaviour
         roomNavigation = GetComponent<RoomNavigation>();
         flagManager = GetComponent<FlagManager>();
         audioManager = GetComponent<AudioManager>();
+        textInput = GetComponent<TextInput>();
     }
 
     private void Start()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Audio;
 
 public class RoomNavigation : MonoBehaviour
 {
@@ -51,11 +52,20 @@ public class RoomNavigation : MonoBehaviour
     {
         if (exitDictionary.ContainsKey(directionNoun))
         {
+            Room previousRoom = currentRoom;
             currentRoom = exitDictionary[directionNoun];
 
-            if (roomSpotsDictionary.ContainsKey(currentRoom.name))
+            if (roomSpotsDictionary.ContainsKey(currentRoom.name) && currentRoom != previousRoom)
             {
-                listener.DOMove(roomSpotsDictionary[currentRoom.name].position, 3f);
+                //make a DOTween Sequence to move from one Room to another and change Mixers
+                Sequence sequence = DOTween.Sequence();
+                sequence.Append(listener.DOLookAt(roomSpotsDictionary[currentRoom.name].position, 1f));
+                sequence.Append(listener.DOMove(roomSpotsDictionary[currentRoom.name].position, 3f));
+                sequence.InsertCallback(2f, () => currentRoom.audioMixer.audioMixer.TransitionToSnapshots(currentRoom.audioMixerSnapshot, currentRoom.snapshotWeights, 1f));
+                sequence.AppendCallback(controller.textInput.InputComplete);
+                sequence.OnComplete(() => controller.DisplayRoomText());
+
+                sequence.Play();
             }
 
             controller.LogStringWithReturn("You head off to the " + directionNoun);

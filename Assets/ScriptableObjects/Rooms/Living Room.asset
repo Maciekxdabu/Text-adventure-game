@@ -16,6 +16,10 @@ MonoBehaviour:
   roomName: livingroom
   audioMixer: {fileID: -468652662986111449, guid: a2f099459f838ea4886308fdf090efb9,
     type: 2}
+  audioMixerSnapshot:
+  - {fileID: -5644275667244825298, guid: a2f099459f838ea4886308fdf090efb9, type: 2}
+  snapshotWeights:
+  - 1
   exits:
   - keyString: bathroom
     flags: []

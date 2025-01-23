@@ -10,6 +10,8 @@ public class Room : ScriptableObject
     public string description;
     public string roomName;
     public AudioMixerGroup audioMixer;
+    public AudioMixerSnapshot[] audioMixerSnapshot;
+    public float[] snapshotWeights = { 1f };
     public Exit[] exits;
     public InteractableObject[] interactableObjectsInRoom;
 }
