@@ -27,13 +27,19 @@ MonoBehaviour:
       much value it represents.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents: []
   - inputAction: {fileID: 11400000, guid: 7dde7166ae602d34aad51665171f1147, type: 2}
     flags: []
     textResponse: You take the aztec coin with you.
     failedTextResponse: 
     actionResponse: {fileID: 0}
+    audioEvents: []
   - inputAction: {fileID: 11400000, guid: ad703a87f61724745ba56be1dc34b222, type: 2}
     flags: []
     textResponse: 
     failedTextResponse: 
     actionResponse: {fileID: 11400000, guid: 624c9efbe12d99a41acd91d9f5970703, type: 2}
+    audioEvents:
+    - clip: {fileID: 8300000, guid: ac29de211d78d984e8f0ff952cb11018, type: 3}
+      passiveOrOneShot: 0
+      objectAffected: {fileID: 11400000, guid: d1201ccb108bd3a40bf29f367782f176, type: 2}

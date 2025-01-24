@@ -27,3 +27,7 @@ MonoBehaviour:
     failedTextResponse: A set of drawers. They are closed and connected to what looks
       like a microphone. Maybe you can open it if you make some specific noises.
     actionResponse: {fileID: 0}
+    audioEvents:
+    - clip: {fileID: 8300000, guid: 279ac1435d266b543858652638b88bf2, type: 3}
+      passiveOrOneShot: 0
+      objectAffected: {fileID: 11400000}
